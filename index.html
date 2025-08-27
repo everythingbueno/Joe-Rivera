@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canva Presentation Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(-10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            aurora: {
+              '0%': { filter: 'hue-rotate(0deg)' },
+              '100%': { filter: 'hue-rotate(360deg)' },
+            },
+            typewriter: {
+              from: { width: '0' },
+              to: { width: '100%' },
+            },
+            blink: {
+              '50%': { 'border-color': 'transparent' },
+            },
+            cursorEnter: {
+              '0%': { opacity: '0', transform: 'translate(20px, 20px) scale(0.8)' },
+              '100%': { opacity: '1', transform: 'translate(0, 0) scale(1)' },
+            },
+            cursorClick: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(0.9)' },
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.3s ease-out forwards',
+            'aurora': 'aurora 10s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-black">
+    <div id="root"></div>
+  </body>
+</html>
